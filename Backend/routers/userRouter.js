@@ -15,8 +15,8 @@ import { verifyToken } from "../middlewares/auth.js";
 const router = express.Router();
 
 // PUBLIC ROUTES
-router.post("/register", register);           // Đăng ký local
-router.post("/login", login);                 // Đăng nhập local
+router.post("/register", register);           
+router.post("/login", login);                 
 router.post("/login/google", loginWithGoogle);   // Đăng nhập Google
 router.post("/login/facebook", loginWithFacebook); // Đăng nhập Facebook
 
