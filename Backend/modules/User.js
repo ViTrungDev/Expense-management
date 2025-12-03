@@ -19,7 +19,15 @@ const userSchema = new mongoose.Schema(
     providerId: { type: String, default: null },
 
     active: { type: Boolean, default: true },
-    isAdmin: { type: Boolean, default: false }
+
+    isAdmin: { type: Boolean, default: false },
+
+    lastLogin: { type: Date, default: Date.now },
+
+    otpCode: { type: String },
+    
+    otpExpires: { type: Date },
+
   },
   { timestamps: true }
 );

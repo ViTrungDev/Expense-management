@@ -6,10 +6,10 @@ dotenv.config();
 
 // import routes
 import UserRoutes from "./routers/userRouter.js";
-// import CategoryRoutes from "./routers/categoryRouter.js";
+import CategoryRoutes from "./routers/categoryRouter.js";
   import TransactionRoutes from "./routers/transactionRouter.js";
-// import BudgetRoutes from "./routers/budgetRouter.js";
-// import GoalRoutes from "./routers/goalRouter.js";
+import BudgetRoutes from "./routers/budgetRouter.js";
+import GoalRoutes from "./routers/goalRouter.js";
 
 const app = express();
 
@@ -19,10 +19,10 @@ app.use(express.json());
 
 // routes
   app.use("/api/users", UserRoutes);
-  // app.use("/api/categories", CategoryRoutes);
+  app.use("/api/categories", CategoryRoutes);
   app.use("/api/transactions", TransactionRoutes);
-  // app.use("/api/budgets", BudgetRoutes);
-  // app.use("/api/goals", GoalRoutes);
+  app.use("/api/budgets", BudgetRoutes);
+  app.use("/api/goals", GoalRoutes);
 
 // test route
 app.get("/", (req, res) => {
